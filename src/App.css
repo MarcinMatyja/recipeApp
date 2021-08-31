@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+* {
+  font-family:Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+  outline: none;
+}
+
+html {
+  font-size: 10px;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(to bottom, #fddb92 30%, #d1fdff 50%);
+}
+
+h1 {
+  font-size: 8rem;
+  font-style: normal;
+  color: #05c5cf;
+  text-transform: uppercase;
+  margin: 4rem 0;
+}
+
+.search-form {
+  width: 50%;
+  height: 5rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #e6e6e6;
+  border-radius: 0.5rem;
+  margin-bottom: 5rem;
+  box-shadow: 1px 2px 5px #aaa;
+  position: relative;
+}
+
+.alert {
+
+  width: 50%;
+  position: absolute;
+  top: -3rem;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  width: 50% ;
+  border-radius: 0.5rem;
+  padding: 0.2rem;
+}
+
+.alert h3 {
+  font-size: 1.8rem;
+  color: #fff;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.search-form input {
+  font-size: 1.6rem;
+  border: none;
+  border-bottom: 0.1rem solid #ccc;
+  margin: 0 0.5rem;
+  border-radius: 0.5rem;
+  height: 3rem;
+}
+
+.search-form input[type="text"] {
+  padding: 0 0.5rem;
+  width: 60%;
+  color: #555;
+}
+
+.search-form input[type="submit"] {
+  width: 25%;
+  text-transform: uppercase;
+  background-color: #05c5cf;
+  color: #fff;
+}
+.search-form input[type="submit"]:hover{
+  background-color: #049ba3;
+  color: rgb(7, 7, 7);
+}
+
+.recipes {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.recipe {
+  width: 30rem;
+  margin: 3rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #d3d3d3;
+  padding: 2rem;
+  position: relative;
+  border-radius: 0.5rem;
+  box-shadow: 2rem 3rem 5rem #aaa;
+}
+.recipe-label{
+  width: 100%;
+  height: 60px;
+}
+
+.recipe h2 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #05c5cf;
+}
+
+.recipe img {
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+.phot-link:hover{
+  box-shadow: rgb(68, 68, 68) 10px 10px 10px ;
+}
+
+.ingre-nut{
+  display: flex;
+  justify-content: space-evenly;
+  margin: 5px;
+  background-color: #d3d3d3;
+
+}
+
+/* .recipe button {
+  font-size: 1.4rem;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  background-color: #05c5cf;
+  text-transform: uppercase;
+  border: none;
+}
+.recipe button:hover{
+  background-color: #0da1a8;
+} */
+
+
+
+.button {
+
+  background-color: #d3d3d3;
+  position: relative;
+  margin-bottom: 25px;
+  border-radius: 50px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+  span {
+    line-height: 35px;
+    padding: 5px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    font-weight: semibold;
+  }
+
+
+  button:nth-child(1) {
+    background-color: #d3d3d3;
+    box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8),
+    6px 6px 10px rgba(0, 0, 0, 0.2);
+    color: #05c5cf;
+  }
+
+    button:nth-child(1):hover {
+      background-color: #d3d3d3;
+      opacity: 0.3;
+      box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8),
+        6px 6px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    button:nth-child(1):active {
+      opacity: 1;
+      box-shadow: inset -4px -4px 8px rgba(255, 255, 255, 0.5),
+        inset 8px 8px 16px rgba(0, 0, 0, 0.1);
+      color: #ffffff;
+      background-color: #05c5cf;
+    }
+    button:nth-child(2) {
+    opacity: 0.3;
+    box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8),
+      6px 6px 10px rgba(0, 0, 0, 0.2);
+    color: #fddb92;
+  }
+
+  button:nth-child(3) {
+    box-shadow: inset -4px -4px 8px rgba(255, 255, 255, 0.5),
+      inset 8px 8px 16px rgba(0, 0, 0, 0.1);
+    color: #79e3b6;
+  }
+  button:nth-child(3):hover {
+      opacity: 1;
+      box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8),
+        6px 6px 10px rgba(0, 0, 0, 0.2);
+      }
+
+
+.ingredient-list {
+  margin-top: 1rem;
+  background-color: #f0f0f0;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+.ingredient-list li {
+  margin: 0.5rem 0;
+}
+
+.ingredient-text {
+  font-size: 1.5rem;
+  color: #888;
+}
+
+.ingredient-weight {
+  color: #05c5cf;
+  font-size: 1.3rem;
+}
