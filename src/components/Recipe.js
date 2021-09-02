@@ -11,7 +11,7 @@ const Recipe = ({ recipe }) => {
 
   const handleClicl = () => {
     setShowingredients(!show);
-    if (activeI=="active"){
+    if (activeI==="active"){
       setNoActiveI("notactive")
     }
     else{ setNoActiveI("active")}
@@ -19,7 +19,7 @@ const Recipe = ({ recipe }) => {
 
   const handleCliclN =() =>{
     setShownutrients(!shown)
-  if (activeN=="active"){
+  if (activeN==="active"){
     setNoActiveN("notactive")
     }
   else{ setNoActiveN("active")}
