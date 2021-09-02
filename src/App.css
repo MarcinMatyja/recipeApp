@@ -18,13 +18,13 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: linear-gradient(to bottom, #fddb92 30%, #d1fdff 50%);
+  background-color: #ffffff;
 }
 
 h1 {
   font-size: 8rem;
   font-style: normal;
-  color: #05c5cf;
+  color: #769353;
   text-transform: uppercase;
   margin: 4rem 0;
 }
@@ -48,7 +48,7 @@ h1 {
   position: absolute;
   top: -3rem;
   left: 0;
-  background-color: rgb(0, 0, 0);
+  background-color: #ebbf58;
   width: 50% ;
   border-radius: 0.5rem;
   padding: 0.2rem;
@@ -80,11 +80,11 @@ h1 {
 .search-form input[type="submit"] {
   width: 25%;
   text-transform: uppercase;
-  background-color: #05c5cf;
+  background-color: #769353;
   color: #fff;
 }
 .search-form input[type="submit"]:hover{
-  background-color: #049ba3;
+  background-color: #3d655d;
   color: rgb(7, 7, 7);
 }
 
@@ -102,7 +102,7 @@ h1 {
   margin: 3rem;
   display: flex;
   flex-direction: column;
-  background-color: #d3d3d3;
+  background-color: #e6e6e6;
   padding: 2rem;
   position: relative;
   border-radius: 0.5rem;
@@ -116,98 +116,48 @@ h1 {
 .recipe h2 {
   font-size: 2.5rem;
   font-weight: 400;
-  color: #05c5cf;
+  color: #769353;
 }
 
 .recipe img {
   border-radius: 0.5rem;
   object-fit: cover;
 }
-.phot-link:hover{
-  box-shadow: rgb(68, 68, 68) 10px 10px 10px ;
+.phot-link{
+  transition: all 1s;
+}
+.phot-link:hover {
+  transform: scale(1.02);
 }
 
 .ingre-nut{
+  /* align-self: flex-end; */
+  margin-top: 15px;
   display: flex;
   justify-content: space-evenly;
-  margin: 5px;
-  background-color: #d3d3d3;
+  background-color: #e6e6e6;
 
 }
 
-/* .recipe button {
-  font-size: 1.4rem;
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  background-color: #05c5cf;
-  text-transform: uppercase;
-  border: none;
-}
-.recipe button:hover{
-  background-color: #0da1a8;
-} */
+span {
+  line-height: 35px;
+  padding: 5px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: semibold;
+} 
 
-
-
-.button {
-
-  background-color: #d3d3d3;
-  position: relative;
-  margin-bottom: 25px;
-  border-radius: 50px;
-  text-align: center;
+.recipe button{
+  color: #3d655d;
   cursor: pointer;
-  transition: all 0.1s ease-in-out;
 }
-  span {
-    line-height: 35px;
-    padding: 5px;
-    font-family: "Montserrat", sans-serif;
-    font-size: 20px;
-    font-weight: semibold;
-  }
 
-
-  button:nth-child(1) {
-    background-color: #d3d3d3;
-    box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8),
-    6px 6px 10px rgba(0, 0, 0, 0.2);
-    color: #05c5cf;
-  }
-
-    button:nth-child(1):hover {
-      background-color: #d3d3d3;
-      opacity: 0.3;
-      box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8),
-        6px 6px 10px rgba(0, 0, 0, 0.2);
-    }
-
-    button:nth-child(1):active {
-      opacity: 1;
-      box-shadow: inset -4px -4px 8px rgba(255, 255, 255, 0.5),
-        inset 8px 8px 16px rgba(0, 0, 0, 0.1);
-      color: #ffffff;
-      background-color: #05c5cf;
-    }
-    button:nth-child(2) {
-    opacity: 0.3;
-    box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8),
-      6px 6px 10px rgba(0, 0, 0, 0.2);
-    color: #fddb92;
-  }
-
-  button:nth-child(3) {
-    box-shadow: inset -4px -4px 8px rgba(255, 255, 255, 0.5),
-      inset 8px 8px 16px rgba(0, 0, 0, 0.1);
-    color: #79e3b6;
-  }
-  button:nth-child(3):hover {
-      opacity: 1;
-      box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8),
-        6px 6px 10px rgba(0, 0, 0, 0.2);
-      }
-
+.recipe .active{
+  background-color: #ebbf58;
+  color: #3d655d;
+  border:#ebbf58 ;
+  cursor: pointer;
+}
 
 .ingredient-list {
   margin-top: 1rem;
@@ -226,6 +176,24 @@ h1 {
 }
 
 .ingredient-weight {
-  color: #05c5cf;
+  color: #769353;
+  font-size: 1.3rem;
+}
+
+
+.nut-list {
+  margin-top: 1rem;
+  background-color: #ebbf58;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+.nut-list li {
+  margin: 0.5rem 0;
+}
+
+
+.nut-weight {
+  color: #769353;
   font-size: 1.3rem;
 }

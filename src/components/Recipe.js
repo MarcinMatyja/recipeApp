@@ -5,8 +5,26 @@ import RecipeDetails from "./RecipeDetails";
 const Recipe = ({ recipe }) => {
   const [show, setShowingredients] = useState(false);
   const [shown, setShownutrients] = useState(false);
-
+  const [activeI, setNoActiveI] = useState("active");
+  const [activeN, setNoActiveN] = useState("active");
   const { label, image, url, ingredients, calories } = recipe.recipe;
+
+  const handleClicl = () => {
+    setShowingredients(!show);
+    if (activeI=="active"){
+      setNoActiveI("notactive")
+    }
+    else{ setNoActiveI("active")}
+  };
+
+  const handleCliclN =() =>{
+    setShownutrients(!shown)
+  if (activeN=="active"){
+    setNoActiveN("notactive")
+    }
+  else{ setNoActiveN("active")}
+  };
+
 
   return (
     <div className="recipe">
@@ -17,9 +35,9 @@ const Recipe = ({ recipe }) => {
       <img src={image} alt={label} />
       </a>
       <div className="ingre-nut">
-      <button onClick={() => setShowingredients(!show)}><span>Ingredients</span></button>
+      <button className={activeI} onClick={handleClicl}><span>Ingredients</span></button>
       <div>
-      <button onClick={() => setShownutrients(!shown)}><span>
+      <button className={activeN} onClick={handleCliclN}><span>
       {Math.round(calories*100)/100} kcal </span>
       </button>
       </div>
@@ -33,6 +51,9 @@ const Recipe = ({ recipe }) => {
       />}
     </div>
   );
+
+
+
 };
 
 export default Recipe;
